@@ -111,8 +111,7 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
             cols="30"
             rows="6"
             placeholder="something about yourself in few words"
-            onChange={(e) => setDescription(e.target.value)}
-          ></textarea>
+            onChange={(e) => setDescription(e.target.value)}></textarea>
           <p>
             The description will be included on the item's detail page
             underneath its image. Markdown syntax is supported.
@@ -132,17 +131,16 @@ const UloadNFT = ({ uploadToIPFS, createNFT }) => {
                   active == i + 1 ? Style.active : ""
                 }`}
                 key={i + 1}
-                onClick={() => (setActive(i + 1), setCategory(el.category))}
-              >
+                onClick={() => (setActive(i + 1), setCategory(el.category))}>
                 <div className={Style.upload_box_slider_box}>
                   <div className={Style.upload_box_slider_box_img}>
-                    <Image
-                      src={el.image}
+                    {/* <Image
+                      src={`${el.image}`}
                       alt="background image"
                       width={70}
                       height={70}
                       className={Style.upload_box_slider_box_img_img}
-                    />
+                    /> */}
                   </div>
                   <div className={Style.upload_box_slider_box_img_icon}>
                     <TiTick />

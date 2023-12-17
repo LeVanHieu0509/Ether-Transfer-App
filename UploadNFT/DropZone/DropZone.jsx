@@ -24,9 +24,10 @@ const DropZone = ({
 
   const onDrop = useCallback(async (acceptedFile) => {
     const url = await uploadToIPFS(acceptedFile[0]);
-    setFileUrl(url);
-    setImage(url);
-    console.log(url);
+    const publicUrl = `https://turquoise-obliged-centipede-803.mypinata.cloud/ipfs/${url}`;
+    setFileUrl(publicUrl);
+    setImage(publicUrl);
+    console.log(publicUrl);
   });
 
   const { getRootProps, getInputProps } = useDropzone({

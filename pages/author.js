@@ -64,16 +64,20 @@ const author = () => {
   const [myNFTs, setMyNFTs] = useState([]);
 
   useEffect(() => {
-    fetchMyNFTsOrListedNFTs("fetchItemsListed").then((items) => {
-      setNfts(items);
-    });
-  }, []);
+    if (currentAccount) {
+      fetchMyNFTsOrListedNFTs("fetchItemsListed").then((items) => {
+        setNfts(items);
+      });
+    }
+  }, [currentAccount]);
 
   useEffect(() => {
-    fetchMyNFTsOrListedNFTs("fetchMyNFTs").then((items) => {
-      setMyNFTs(items);
-    });
-  }, []);
+    if (currentAccount) {
+      fetchMyNFTsOrListedNFTs("fetchMyNFTs").then((items) => {
+        setMyNFTs(items);
+      });
+    }
+  }, [currentAccount]);
 
   return (
     <div className={Style.author}>

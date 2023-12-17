@@ -3,7 +3,10 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["daulat-nft-marketplace.infura-ipfs.io", "infura-ipfs.io"],
+    domains: [
+      "turquoise-obliged-centipede-803.mypinata.cloud",
+      "gateway.pinata.cloud",
+    ],
   },
 };
 

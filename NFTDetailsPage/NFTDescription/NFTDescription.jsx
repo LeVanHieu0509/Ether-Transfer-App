@@ -212,32 +212,28 @@ const NFTDescription = ({ nft }) => {
               <div
                 className={
                   Style.NFTDescription_box_profile_biding_box_timer_item
-                }
-              >
+                }>
                 <p>2</p>
                 <span>Days</span>
               </div>
               <div
                 className={
                   Style.NFTDescription_box_profile_biding_box_timer_item
-                }
-              >
+                }>
                 <p>22</p>
                 <span>hours</span>
               </div>
               <div
                 className={
                   Style.NFTDescription_box_profile_biding_box_timer_item
-                }
-              >
+                }>
                 <p>45</p>
                 <span>mins</span>
               </div>
               <div
                 className={
                   Style.NFTDescription_box_profile_biding_box_timer_item
-                }
-              >
+                }>
                 <p>12</p>
                 <span>secs</span>
               </div>
@@ -247,8 +243,7 @@ const NFTDescription = ({ nft }) => {
               <div
                 className={
                   Style.NFTDescription_box_profile_biding_box_price_bid
-                }
-              >
+                }>
                 <small>Current Bid</small>
                 <p>
                   {nft.price} ETH <span>( ≈ $3,221.22)</span>
@@ -263,7 +258,7 @@ const NFTDescription = ({ nft }) => {
                 <p>You can't buy your own NFT</p>
               ) : currentAccount == nft.owner.toLowerCase() ? (
                 <Button
-                  icon=<FaWallet />
+                  icon={<FaWallet />}
                   btnName="List on Marketplace"
                   handleClick={() =>
                     router.push(
@@ -274,7 +269,7 @@ const NFTDescription = ({ nft }) => {
                 />
               ) : (
                 <Button
-                  icon=<FaWallet />
+                  icon={<FaWallet />}
                   btnName="Buy NFT"
                   handleClick={() => buyNFT(nft)}
                   classStyle={Style.button}
@@ -282,7 +277,7 @@ const NFTDescription = ({ nft }) => {
               )}
 
               <Button
-                icon=<FaPercentage />
+                icon={<FaPercentage />}
                 btnName="Make offer"
                 handleClick={() => {}}
                 classStyle={Style.button}

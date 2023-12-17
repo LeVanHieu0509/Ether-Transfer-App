@@ -71,8 +71,7 @@ const NFTDetailsImg = ({ nft }) => {
 
         <div
           className={Style.NFTDetailsImg_box_description}
-          onClick={() => openDescription()}
-        >
+          onClick={() => openDescription()}>
           <p>Description</p>
           {description ? <TiArrowSortedUp /> : <TiArrowSortedDown />}
         </div>
@@ -85,8 +84,7 @@ const NFTDetailsImg = ({ nft }) => {
 
         <div
           className={Style.NFTDetailsImg_box_details}
-          onClick={() => openDetails()}
-        >
+          onClick={() => openDetails()}>
           <p>Details</p>
           {details ? <TiArrowSortedUp /> : <TiArrowSortedDown />}
         </div>
